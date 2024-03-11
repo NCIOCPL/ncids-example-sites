@@ -1,0 +1,32 @@
+@use 'uswds-core' with (
+    $theme-image-path: '@nciocpl/ncids-css/uswds-img',
+		$theme-show-notifications: false,
+		$theme-global-link-styles: true,
+);
+@forward 'uswds-global';
+
+@forward 'usa-layout-grid';
+@forward 'nci-no-print'; //print styling
+
+@forward 'usa-skipnav';
+@forward 'usa-banner';
+@forward 'nci-header';
+@forward 'usa-site-alert';
+@forward 'usa-footer';
+
+// This is global typography and body content styling. The following imports
+// are from the uswds-typography package, however we will comment out the
+// ones we do not thing should be global.
+@forward "usa-content";
+@forward "usa-dark-background";
+@forward "usa-display";
+// The intro styling seems silly here as we only use into on articles and
+// blogs posts for the most part.
+//@forward "usa-intro";
+@forward "usa-link";
+// List is actually already included with footer, however, we include it
+// here in the event it is removed from the footer some day.
+@forward "usa-list";
+@forward "usa-paragraph";
+@forward "usa-prose";
+@forward "nci-heading";

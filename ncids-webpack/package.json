@@ -32,8 +32,8 @@
 		"webpack-cli": "^4.9.2"
 	},
 	"dependencies": {
-		"@nciocpl/ncids-css": "^2.3.0",
-		"@nciocpl/ncids-js": "^2.3.0"
+		"@nciocpl/ncids-css": "^2.5.0-alpha.9",
+		"@nciocpl/ncids-js": "^2.5.0-alpha.9"
 	},
 	"browserslist": {
 		"production": [

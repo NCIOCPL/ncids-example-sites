@@ -1,0 +1,31 @@
+{% set title = 'NCIDS Example TypeScript' %}
+<html lang="en">
+	<head>
+		{% include '/layouts/common-head.twig' %}
+		<link rel="stylesheet" href="/src/styles/home.scss">
+		<title>{{ title }}</title>
+	</head>
+	<body>
+		{% include '/components/usa-banner.twig' %}
+		{% include '/components/nci-header--extended.twig' %}
+		<main
+			id="main-content"
+		>
+			<h1 class="nci-heading-h1">{{ title }}</h1>
+			<div class="usa-section usa-section--dark">
+				<div class="grid-container">
+					<h2 class="nci-heading-h2">Section one here</h2>
+					<p>I am a custom twig file.</p>
+					<p>You might even just make</p>
+				</div>
+			</div>
+			<div class="usa-section usa-section--light">
+				<div class="grid-container">
+					<h2 class="nci-heading-h2 nci-heading--label">Section two here</h2>
+					<p>You get the idea</p>
+				</div>
+			</div>
+		</main>
+		{% include '/components/usa-footer--nci-big.twig' %}
+	</body>
+</html>

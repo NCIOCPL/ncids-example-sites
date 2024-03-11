@@ -1,0 +1,29 @@
+{
+  "name": "ncids-vite-ts",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "engines": {
+    "node": ">=18.0.0 <19.0.0",
+    "npm": ">=9.0.0 <10.0.0"
+  },
+  "devDependencies": {
+    "@vituum/vite-plugin-twig": "^1.1.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.1",
+    "sass": "^1.69.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vituum": "^1.1.0"
+  },
+  "dependencies": {
+    "@nciocpl/ncids-css": "^2.5.0-alpha.6",
+    "@nciocpl/ncids-js": "^2.5.0-alpha.6"
+  }
+}

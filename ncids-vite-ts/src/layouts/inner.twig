@@ -1,0 +1,25 @@
+<html lang="en">
+	<head>
+		{% include './common-head.twig' %}
+		<title>{{ title }}</title>
+	</head>
+	<body>
+		{% include '../components/usa-banner.twig' %}
+		{% include '../components/nci-header--extended.twig' %}
+		<div class="grid-container">
+			<div class="grid-row grid-gap">
+				<div class="grid-col-3">
+				...side...
+				</div>
+				<main
+					id="main-content"
+					class="desktop:grid-col-9 usa-prose margin-bottom-4"
+				>
+					<h1 class="nci-heading-h1">{{ title }}</h1>
+					{% include '../components/sample-prose.twig' %}
+				</main>
+			</div>
+		</div>
+		{% include '../components/usa-footer--nci-big.twig' %}
+	</body>
+</html>
