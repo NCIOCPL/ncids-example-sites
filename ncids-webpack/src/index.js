@@ -27,14 +27,12 @@ import './index.scss';
  * Imports the NCI Extended Header with Mega Menu component auto initializer.
  * Note: this should output a console warning for mega menu.
  */
-import '@nciocpl/ncids-js/components/nci-header/extended-with-mega-menu/auto-init';
-
+import '@nciocpl/ncids-js/nci-header/extended-with-mega-menu/auto-init';
 /**
  * Imports the NCI Site Alert component auto initializer.
  */
-import '@nciocpl/ncids-js/components/usa-site-alert/auto-init';
-
+import '@nciocpl/ncids-js/usa-site-alert/auto-init';
 /**
  * Imports the NCI Big Footer component auto initializer.
  */
-import '@nciocpl/ncids-js/components/usa-footer/nci-big/auto-init';
+import '@nciocpl/ncids-js/usa-footer/nci-big/auto-init';
