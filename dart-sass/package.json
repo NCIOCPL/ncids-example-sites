@@ -1,0 +1,37 @@
+{
+	"name": "dart-sass",
+	"version": "1.0.0",
+	"description": "Dart Sass example repository",
+	"main": "index.js",
+	"keywords": [
+		"National Cancer Institute Design System",
+		"ncids",
+		"sass",
+		"css"
+	],
+	"author": "National Cancer Institute",
+	"license": "ISC",
+	"scripts": {
+		"build:ncids": "sass -I ./node_modules/@nciocpl/ncids-css/uswds-packages -I ./node_modules/@nciocpl/ncids-css/packages ./node_modules/@nciocpl/ncids-css/index.scss ./dist/ncids-compiled.css",
+		"build:dev": "sass -I ./node_modules/@nciocpl/ncids-css/uswds-packages -I ./node_modules/@nciocpl/ncids-css/packages ./node_modules/@nciocpl/ncids-css/index.scss ./dist/examples-styles.css"
+	},
+	"devDependencies": {
+		"sass": "^1.71.0"
+	},
+	"dependencies": {
+		"@nciocpl/ncids-css": "^3.0.0"
+	},
+	"browserslist": {
+		"production": [
+			">1%",
+			"last 2 versions",
+			"not dead",
+			"not IE 11"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
