@@ -1,0 +1,13 @@
+@use 'uswds-core' with (
+	$theme-image-path: 'dist/img/'
+);
+
+@import "usa-button";
+@import "nci-header";
+@import "usa-sidenav";
+@import 'usa-site-alert';
+
+.example-class {
+	@extend usa-button;
+	margin-bottom:2rem;
+}
