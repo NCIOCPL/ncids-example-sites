@@ -1,0 +1,77 @@
+/**
+ * This is the main SCSS stylesheet file where you can define and organize your styles for the application.
+ *
+ * The @use and @forward directives are used to import and manage SCSS modules and partials.
+ *
+ * - @use directive allows you to import and use functionality from other SCSS modules.
+ *   It provides better encapsulation and avoids conflicting global CSS class names.
+ *   Use it to import SCSS modules that contain reusable styles, mixins, variables, or functions.
+
+ * - @forward directive allows you to re-export styles from one module to another.
+ *   It acts as a bridge between different SCSS modules, making styles available for import in other files.
+ *   Use it when you want to expose certain styles or functionality from one module to be used in another.
+ *
+ * Additionally, the design system requires autoprefixing to work properly. Don’t add vendor prefixes
+ * to your custom styles manually — it is more reliable to use autoprefixing. See postcss.config.js for
+ * more information.
+ */
+
+/**
+ * Required - USWDS core styles
+ *
+ * Imports core settings, variables, functions, mixins, etc. with recommended customizations.
+ *
+ * Important Note: In this configuration, the $theme-image-path is set to the module path.
+ * This webpack setup is designed to inline icons referenced in the CSS if they are under
+ * 8192 bytes in size. Files exceeding 8192 bytes will be copied to the dist folder.
+ */
+@use 'uswds-core' as * with (
+	$theme-image-path: '@nciocpl/ncids-css/uswds-img'
+);
+
+/**
+ * Required - Global USWDS styles
+ * Imports normalize, fonts, elements, and accessibility helpers.
+ */
+@forward 'uswds-global';
+
+/**
+ * Recommended - Typography styles
+ * Imports links, lists, paragraph, and other commonly used font styles.
+ */
+@forward 'uswds-typography';
+
+/**
+ * Option 1: Import only the packages you need (recommended)
+ */
+@forward 'usa-layout-grid';
+@forward 'usa-skipnav';
+@forward 'usa-banner';
+@forward 'nci-header';
+@forward 'usa-footer';
+
+/**
+ * Option 2: Import the entire ncids-css library
+ * This is not recommended due to the file size that will be generated.
+ */
+// @forward 'ncids';
+
+
+/**
+ * Extending NCIDS
+ *
+ * If you don't need all of NCIDS, or just want parts you can also import
+ * directly into your own SCSS file. This will allow you to extend NCIDS
+ * into your own style classes, or just save file size.
+ *
+ * Create your scss file by starting off with the `@use` rule as listed below.
+ * This sets up root path for any images that will be used in your scss file,
+ * as well any icons or images required from NCIDS that you add.
+ *
+ * You can also extend classes to fit your visual presentation.
+ */
+.custom-button {
+	@extend .usa-button;
+	margin-top: units(2);
+	padding: units(4);
+}
