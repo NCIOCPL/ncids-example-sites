@@ -40,8 +40,8 @@ Please note for all applications consuming the NCIDS, you **must**:
 Each example directory contains its own README file, providing detailed instructions on how to set up and run the respective application.
 
 1. [NCIDS Webpack](./ncids-webpack): This example demonstrates the minimal setup required to build and run NCIDS using webpack. It provides a starting point for utilizing the design system in your projects.
-
-2. More to come!
+2. [NCIDS Dart Sass](./ncids-dart-sass): If you plan on working with NCIDS as a static CSS file, you can simply compile the entire package using Dart Sass.
+3. More to come!
 
 ## Additional Resources
 
