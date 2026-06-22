@@ -1,0 +1,39 @@
+{
+	"name": "dart-sass",
+	"version": "1.0.0",
+	"description": "NCIDS example repository using dart sass",
+	"main": "index.js",
+	"keywords": [
+		"National Cancer Institute Design System",
+		"ncids",
+		"sass",
+		"css"
+	],
+	"author": "National Cancer Institute",
+	"license": "ISC",
+	"scripts": {
+		"build:css": "sass -I ./node_modules/@nciocpl/ncids-css/uswds-packages -I ./node_modules/@nciocpl/ncids-css/packages ./src/index.scss ./dist/ncids-compiled.css && postcss ./dist/ncids-compiled.css --output ./dist/styles.css",
+		"build:watch": "sass --watch -I ./node_modules/@nciocpl/ncids-css/uswds-packages -I ./node_modules/@nciocpl/ncids-css/packages ./src/index.scss ./dist/ncids-compiled.css && postcss ./dist/ncids-compiled.css --output ./dist/styles.css"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.20",
+		"postcss-cli": "^11.0.0",
+		"sass": "^1.77.8"
+	},
+	"dependencies": {
+		"@nciocpl/ncids-css": "^3.0.0"
+	},
+	"browserslist": {
+		"production": [
+			">1%",
+			"last 2 versions",
+			"not dead",
+			"not IE 11"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
